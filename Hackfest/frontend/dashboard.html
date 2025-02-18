@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WattsUp - Dashboard</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="scripts/dashboard.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html">WattsUp</a></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="quiz.html">Interactive Quiz</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="checkin.html">Check In</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="dashboard-container">
+        <h1>Energy Consumption Dashboard</h1>
+        
+        <div class="region-selector">
+            <label for="region">Select Region:</label>
+            <select id="region">
+                <option value="pacific">Pacific</option>
+                <option value="midwest">Midwest</option>
+                <option value="new-mexico">New Mexico</option>
+                <option value="southwest">Southwest</option>
+                <option value="oklahoma">Oklahoma</option>
+                <option value="south-carolina">South Carolina</option>
+                <option value="new-york">New York</option>
+                <option value="rocky-mountain">Rocky Mountain</option>
+            </select>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="data-card">
+                <h3>Current Consumption</h3>
+                <p id="current-consumption">Loading...</p>
+                <p class="unit">MWh</p>
+            </div>
+            
+            <div class="data-card">
+                <h3>Region</h3>
+                <p id="region-name">Loading...</p>
+            </div>
+
+            <div class="data-card">
+                <h3>Last Updated</h3>
+                <p id="last-updated">Loading...</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

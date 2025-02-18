@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif; /* Keep font consistent throughout website */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar { /* Navigation bar */
+    background-color: #000;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white; /* white text */
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-brand a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-brand a:hover {
+    color: #3498db; /*blue on hover*/
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.hero { /* Hero (main page)*/
+    padding: 64px 32px;
+    text-align: center;
+    background-color: #f8f9fa;
+    background-image: url('../images/lightbulb.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-top: 200px;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin-right: 500px;
+}
+
+.hero button {
+    background-color: white;
+    color: #000;
+    border: none;
+    padding: 8px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: 1060px;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-5px);
+}
+
+/* Common Container Styles for Quiz and Checkin */
+.quiz-container,
+.checkin-container {
+    padding: 64px 32px;
+    text-align: center;
+    background-color: #f8f9fa;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/lightbulb.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Common Content Box Styles for Quiz and Checkin */
+.quiz-content,
+.checkin-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 32px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Common Heading Styles for Quiz and Checkin */
+.quiz-container h1,
+.checkin-container h1 {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.quiz-content h3,
+.checkin-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 32px;
+}
+
+/* Common Result Styles for Quiz and Checkin */
+#quiz-result,
+#checkin-result {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    padding: 16px;
+}
+
+/* Quiz Styles */
+.quiz-container h1 {
+    margin-top: 50px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Quiz Question Styles */
+.quiz-content h3 {
+    margin-bottom: 32px;
+    font-weight: 500;
+}
+
+/* Quiz Options Styles */
+.quiz-content label {
+    display: block;
+    margin: 16px 0;
+    padding: 16px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quiz-content label:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.quiz-content input[type="radio"] {
+    margin-right: 16px;
+    transform: scale(1.2);
+}
+
+/* Submit Button Style */
+#submit {
+    margin-top: 32px;
+}
+
+/* Result Style */
+#result {
+    margin-top: 32px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    padding: 16px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.about-container {
+    padding: 64px 32px;
+    text-align: center;
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('../images/lightbulb.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+}
+
+.about-container h1 {
+    margin-top: 50px;
+    margin-bottom: 24px;
+    font-size: 48px;
+    margin-left: 96px;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    padding: 32px;
+}
+
+.about-content h2 {
+    color: #3498db;
+    margin-bottom: 24px;
+    font-size: 32px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.features ul {
+    list-style: none;
+    text-align: left;
+    padding: 0 32px;
+}
+
+.features li {
+    margin-bottom: 16px;
+    font-size: 18px;
+    position: relative;
+    padding-left: 24px;
+}
+
+.features li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+.mission, .features, .impact {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Dashboard Styles */
+
+.dashboard-container {
+    padding: 32px;
+    margin: 0 auto;
+    background-color: #000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('../images/consumption.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.dashboard-container h1 {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 48px;
+    font-size: 48px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.region-selector {
+    margin: 32px 0;
+    color: white;
+}
+
+.region-selector select {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-left: 16px;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.data-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+.data-card h3 {
+    margin-bottom: 16px;
+    color: #3498db;
+}
+
+.data-card p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.data-card .unit {
+    font-size: 14px;
+    color: #888;
+    margin-top: 8px;
+}
+
+/* Check In Styles */
+.checkin-container h1 {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.checkin-content h3 {
+    margin-bottom: 32px;
+}
+
+.checkin-item {
+    margin: 24px 0;
+    text-align: left;
+}
+
+.checkin-item label {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    padding: 16px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.checkin-item input{
+    margin-left: 100px;
+}
+
+/* Calculator Styles */
+.calculator-container {
+    padding: 64px 32px;
+    text-align: center;
+    background-color: #f8f9fa;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/lightbulb.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 32px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-container h1 {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.calc-item {
+    margin: 24px 0;
+    text-align: left;
+}
+
+.calc-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+.calc-item select,
+.calc-item input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#calculator-result {
+    margin-top: 32px;
+    padding: 24px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #333;
+    text-align: left;
+}
+
+#calculator-result div {
+    margin: 8px 0;
+}
+
+/* Button Class */
+.shared-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 32px;
+    width: 200px;
+}
+
+.shared-button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}

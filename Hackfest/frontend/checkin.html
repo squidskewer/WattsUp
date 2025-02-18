@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WattsUp - Energy Check In</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="scripts/checkin.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html">WattsUp</a></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="quiz.html">Interactive Quiz</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="checkin.html">Check In</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="checkin-container">
+            <h1>Energy Consumption Check In</h1>
+            <div class="checkin-content">
+                <h3>Evaluate Your Energy Usage</h3>
+                <form id="checkin-form">
+                    <div class="checkin-item">
+                        <label>Do you turn off lights when leaving a room?
+                            <input type="radio" name="q0" value="yes">Yes
+                            <input type="radio" name="q0" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you use energy-efficient LED light bulbs?
+                            <input type="radio" name="q1" value="yes">Yes
+                            <input type="radio" name="q1" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you unplug chargers when not in use?
+                            <input type="radio" name="q2" value="yes">Yes
+                            <input type="radio" name="q2" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you use a programmable thermostat?
+                            <input type="radio" name="q3" value="yes">Yes
+                            <input type="radio" name="q3" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you turn off your computer when not in use?
+                            <input type="radio" name="q4" value="yes">Yes
+                            <input type="radio" name="q4" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you wash clothes with cold water?
+                            <input type="radio" name="q5" value="yes">Yes
+                            <input type="radio" name="q5" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you line-dry clothes instead of using a dryer?
+                            <input type="radio" name="q6" value="yes">Yes
+                            <input type="radio" name="q6" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you turn off the TV when no one is watching?
+                            <input type="radio" name="q7" value="yes">Yes
+                            <input type="radio" name="q7" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you take short showers (under 10 minutes)?
+                            <input type="radio" name="q8" value="yes">Yes
+                            <input type="radio" name="q8" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you use power strips to reduce phantom power?
+                            <input type="radio" name="q9" value="yes">Yes
+                            <input type="radio" name="q9" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you keep the fridge door closed as much as possible?
+                            <input type="radio" name="q10" value="yes">Yes
+                            <input type="radio" name="q10" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you use energy-efficient appliances?
+                            <input type="radio" name="q11" value="yes">Yes
+                            <input type="radio" name="q11" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you carpool, bike, or use public transportation often?
+                            <input type="radio" name="q12" value="yes">Yes
+                            <input type="radio" name="q12" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you limit the use of air conditioning and heating?
+                            <input type="radio" name="q13" value="yes">Yes
+                            <input type="radio" name="q13" value="no">No
+                        </label>
+                    </div>
+                    <div class="checkin-item">
+                        <label>Do you use a dishwasher only when it's fully loaded?
+                            <input type="radio" name="q14" value="yes">Yes
+                            <input type="radio" name="q14" value="no">No
+                        </label>
+                    </div>
+                    <button type="button" id="submit-checkin" class="shared-button" onclick="calculateEnergy()">Calculate Score</button>
+                </form>
+                <div id="result"></div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WattsUp - Energy Calculator</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="scripts/calculator.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand"><a href="index.html">WattsUp</a></div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="quiz.html">Interactive Quiz</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="checkin.html">Check In</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="calculator-container">
+            <h1>Energy Cost Calculator</h1>
+            <div class="calculator-content">
+                <h3>Calculate Your Energy Usage Cost</h3>
+                <form id="calculator-form">
+                    <div class="calc-item">
+                        <label for="appliance">Select Appliance:</label>
+                        <select id="appliance" name="appliance">
+                            <option value="fridge">Refrigerator</option>
+                            <option value="washer">Washing Machine</option>
+                            <option value="dryer">Dryer</option>
+                            <option value="dishwasher">Dishwasher</option>
+                            <option value="ac">Air Conditioner</option>
+                            <option value="heater">Space Heater</option>
+                            <option value="tv">Television</option>
+                            <option value="computer">Computer</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-item">
+                        <label for="hours">Hours Used Per Day:</label>
+                        <input type="number" id="hours" name="hours" min="0" max="24" step="0.5">
+                    </div>
+
+                    <div class="calc-item">
+                        <label for="rate">Electricity Rate (cents per kWh):</label>
+                        <input type="number" id="rate" name="rate" min="0" step="0.01" value="12">
+                    </div>
+
+                    <button type="button" class="shared-button" onclick="calculateCost()">Calculate Cost</button>
+                </form>
+
+                <div id="calculator-result">
+                    <div id="daily-cost"></div>
+                    <div id="monthly-cost"></div>
+                    <div id="yearly-cost"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
